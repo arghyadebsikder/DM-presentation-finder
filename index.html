@@ -152,10 +152,11 @@
             "Euler circuit and path",
             "Hamilton circuit and path",
             "Shortest path (Dijkstra)",
-            "Tree and its basic terminologies",
+            "Tree and it's basic terminologies",
             "Minimum spanning tree (Prim's algorithm)",
             "Minimum spanning tree (Krushkal's algorithm)",
-            "Mathematical Induction"
+            "Mathematical Induction",
+            "Relation and it's properties"
         ];
 
         const inputs = document.querySelectorAll('.otp-input');
@@ -222,9 +223,9 @@
                 const idString = val1 + val2 + val3;
                 const idNumber = parseInt(idString, 10);
 
-                // Apply the formula: ((last 3 digit % 12) + 1)
-                const topicIndex = (idNumber % 12); // Yields 0-11
-                const topicNumber = topicIndex + 1; // Yields 1-12
+                // Apply the formula: ((last 3 digit % 13) + 1)
+                const topicIndex = (idNumber % 13); // Yields 0-12
+                const topicNumber = topicIndex + 1; // Yields 1-13
 
                 // Update UI
                 document.getElementById('topicNum').innerText = topicNumber;
